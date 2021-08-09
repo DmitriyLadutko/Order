@@ -1,0 +1,18 @@
+<div class="container">
+    <ul class="nav nav-pills">
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary">Create</button>
+        <a class="btn btn-primary" href="{% url 'order' %}"> Back</a>
+        <p>Email :{{form.user_email.field.widget.input_type}}</p>
+        <p>Phone :{{form.user_phone.field.widget.input_type}}</p>
+        <p>Date :{{form.date.field.widget.input_type}}</p>
+        <p>Text :{{form.text.field.widget.input_type}}</p>
+      </form>
+    </ul>
+</div>
+
+
+
+
